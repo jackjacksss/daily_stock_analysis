@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+- [改进] 每日分析工作流透传免费数据源配置：ENABLE_FUNDAMENTAL_PIPELINE=true、FUNDAMENTAL_STAGE_TIMEOUT_SECONDS=45、FUNDAMENTAL_FETCH_TIMEOUT_SECONDS=15、FUTU_HK_REALTIME_SOURCE_PRIORITY=yfinance,longbridge,akshare,futu；可通过 Actions Repository variables 覆盖，保持原定时与通知行为。
+
 - [文档] 三语 README 分别使用 Modelflare 简体中文、英文及繁体中文赞助横幅，保持现有版式与链接。
 
 - [改进] Modelflare 只需 MODELFLARE_KEY，后端、Web、筛选及 Actions 统一自动识别渠道并补齐默认地址与模型，保留显式 YAML／渠道配置优先级和高级渠道 Key 兼容。
