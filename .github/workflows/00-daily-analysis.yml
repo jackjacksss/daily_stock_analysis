@@ -438,7 +438,12 @@ jobs:
           ANALYSIS_DELAY: ${{ vars.ANALYSIS_DELAY || secrets.ANALYSIS_DELAY || '0' }}
           TRADING_DAY_CHECK_ENABLED: ${{ vars.TRADING_DAY_CHECK_ENABLED || secrets.TRADING_DAY_CHECK_ENABLED || 'true' }}
           
-          # ==========================================
+           # Free-source fundamentals: allow slow responses and prefer Yahoo for HK quotes.
+          ENABLE_FUNDAMENTAL_PIPELINE: ${{ vars.ENABLE_FUNDAMENTAL_PIPELINE || 'true' }}
+          FUNDAMENTAL_STAGE_TIMEOUT_SECONDS: ${{ vars.FUNDAMENTAL_STAGE_TIMEOUT_SECONDS || '45' }}
+          FUNDAMENTAL_FETCH_TIMEOUT_SECONDS: ${{ vars.FUNDAMENTAL_FETCH_TIMEOUT_SECONDS || '15' }}
+          FUTU_HK_REALTIME_SOURCE_PRIORITY: ${{ vars.FUTU_HK_REALTIME_SOURCE_PRIORITY || 'yfinance,longbridge,akshare,futu' }}
+         # ==========================================
           # 系统配置
           # ==========================================
           LOG_LEVEL: INFO
